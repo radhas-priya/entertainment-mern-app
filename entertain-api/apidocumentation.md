@@ -75,7 +75,7 @@ async({ type },thunkApi)=>{
 
 
 
-3 For fetting data by genre 
+3 For fetching data by genre 
 
 export const fetchDataByGenre = createAsyncThunk(
   "entertain/moviesByGenres",
