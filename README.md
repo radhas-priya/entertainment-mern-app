@@ -63,3 +63,7 @@ utils->firebase-config.js Inside this ther e is the connection crated between th
 assets > assets coontiansthe images that has been used inside the application.
 
 axios we have used axios for handling th erequests that are made for the api,s.
+
+
+
+live-link: https://mern-entertainment-jf2lupmeh-priya-aryas-projects.vercel.app
