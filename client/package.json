@@ -16,10 +16,9 @@
     "react-router-dom": "^6.23.1",
     "react-scripts": "5.0.1",
     "styled-components": "^6.1.11",
+    "vercel": "^34.2.3",
     "web-vitals": "^2.1.4"
   },
-
-
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
