@@ -122,6 +122,60 @@ The link only work for the localhost not for the live site.
 }
 This is a post request which will help in taking th einput from the user side as its users choice what he wants to add or remove from the list .
 
+---------------------------------------------------------------
+ For handling signin
+---------------------------------------------------------------
+
+ const handleSignIn= async()=>{
+      try{
+        const {email,password} =formValues;
+        await createUserWithEmailAndPassword(firebaseAuth,email,password)
+      }catch(err){
+        console.log(err);
+      }
+    };
+    
+    onAuthStateChanged(firebaseAuth, (currentUser) => {
+        if (currentUser) navigate("/");
+    });
+
+Firebase is used to handle signup. Firebase has inbuilt function  for authetnication of the user 
+ createUserWithEmailAndPassword  onAuthStateChanged to handle the signup part .
+ After destructing the object containing email and password it will create user with email and password ,After this we will navigate the user to the main  page 
+
+
+-------------------------------------------------------------------
+    For handlingLogIn
+-------------------------------------------------------------------
+
+
+        const handleLogIn = async () => {
+        try {
+            const { email, password } = formValues;
+            await signInWithEmailAndPassword(firebaseAuth, email, password);
+        } catch (err) {
+            console.log(err);
+        }
+    };
+
+    onAuthStateChanged(firebaseAuth, (currentUser) => {
+        if (currentUser) navigate("/");
+    });
+
+Firebase is used to handle login. Firebase has inbuilt function  for authetnication of the user 
+ createUserWithEmailAndPassword  onAuthStateChanged to handle the login part .
+  After destructing the object containing email and password it will create user with email and password ,After this we will navigate the user to the main  page 
+
+Some of the HTTP status codes for failure scenarios are mentioned below:
+
+401 Unauthorized
+401 Unauthorized
+400 Bad request
+500 Internal server error
+
+
+For okay resonse :
+200 OK 
 
 
 
